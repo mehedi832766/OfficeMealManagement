@@ -7,6 +7,6 @@ class DayMenu(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     updated_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
 
-    # def __str__(self):
-    #     days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-    #     return f"{days[self.day_of_week]} Menu"
+    def __str__(self):
+        days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+        return f"{days[self.day_of_week]} Menu"
